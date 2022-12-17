@@ -1,0 +1,74 @@
+<resources>
+    <string name="NoData">暂无数据</string>
+    <string name="out">支出</string>
+    <string name="in">收入</string>
+    <string name="app_name">林大账本</string>
+    <string name="editnote">记账</string>
+    <string name="month_out">本月支出</string>
+    <string name="month_in">收入</string>
+    <string name="budget">预算剩余</string>
+    <string name="set_budget">设置预算</string>
+    <string name="chart">数据可视化分析</string>
+    <string name="add_remark">添加备注</string>
+    <string name="remark">请输入你要添加的备注</string>
+    <string name="ensure">确定</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="update">软件更新</string>
+    <string name="theme">更换主题</string>
+    <string name="about">关于</string>
+    <string name="treehollow">林大树洞</string>
+    <string name="chart_info">账单数据可视化分析</string>
+    <string name="accountInfo">账户信息</string>
+    <string name="clear">清空账本</string>
+    <string name="history_record">账单记录</string>
+    <string name="please_input_time">请输入时间（24小时制）</string>
+    <string name="please_search_info">请输入备注信息</string>
+    <string name="data_empty">数据为空，无相关记录...</string>
+    <string name="dev">正在开发中...</string>
+
+
+    <string name="about_info">应用信息</string>
+    <string name="about_version">版本</string>
+    <string name="about_1">1.0</string>
+    <string name="about_app">关于应用</string>
+    <string name="about_more">林大账本</string>
+    <string name="about_developer">开发者(编码及测试)：赵禄 谢帅 周闵 吴相烨</string>
+    <string name="about_us">关于我们</string>
+    <string name="about_loc">长沙市天心区 中南林业科技大学 20级信计1班</string>
+    <string name="about_email">联系我们</string>
+    <string name="about_emaildetail">发送邮件到:1466067009@qq.com</string>
+
+    <string name="history_info">本月账单记录</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+    //年级选择列表的元素
+    <string-array name="grade">
+        <item>大一</item>
+        <item>大二</item>
+        <item>大三</item>
+        <item>大四</item>
+        <item>研究生</item>
+        <item>博士生</item>
+        <item>教职工</item>
+    </string-array>
+
+    //性别选择
+    //年级选择列表的元素
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+</resources>

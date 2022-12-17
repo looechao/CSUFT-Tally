@@ -1,0 +1,358 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.AboutActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.AccountActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.BuildConfig {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.HistoryActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.MainActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.MonthChartActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.RecordActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.SearchActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.SettingActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.TreehollowActivity {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.UniteApp {
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace adapter {
+      class com.example.csufttally.adapter.AccountAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace adapter {
+      class com.example.csufttally.adapter.CalendarAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace adapter {
+      class com.example.csufttally.adapter.ChartItemAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace adapter {
+      class com.example.csufttally.adapter.ChartVpAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace adapter {
+      class com.example.csufttally.adapter.RecordPagerAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace db {
+      class com.example.csufttally.db.AccountBean {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace db {
+      class com.example.csufttally.db.BarChartItemBean {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace db {
+      class com.example.csufttally.db.ChartItemBean {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace db {
+      class com.example.csufttally.db.DBManager {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace db {
+      class com.example.csufttally.db.DBOpenHelper {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace db {
+      class com.example.csufttally.db.PieChartItemBean {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace db {
+      class com.example.csufttally.db.TypeBean {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace frag_chart {
+      abstract class com.example.csufttally.frag_chart.BaseChartFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace frag_chart {
+      class com.example.csufttally.frag_chart.IncomeChartFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace frag_chart {
+      class com.example.csufttally.frag_chart.OutcomeChartFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace frag_record {
+      abstract class com.example.csufttally.frag_record.BaseRecordFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace frag_record {
+      class com.example.csufttally.frag_record.IncomeFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace frag_record {
+      class com.example.csufttally.frag_record.OutcomeFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace frag_record {
+      class com.example.csufttally.frag_record.TypeBaseAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace logs {
+      class com.example.csufttally.logs.LoginActivity {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace logs {
+      class com.example.csufttally.logs.RegisterActivity {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.BeiZhuDialog {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.BudgetDialog {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.CalendarDialog {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.FloatUtils {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.KeyBoardUtils {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.MoreDialog {
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.SelectTimeDialog {
+      }
+    }
+  }
+  
+
+  com.example.csufttally.AboutActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.AccountActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.HistoryActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.HistoryActivity o-- com.example.csufttally.adapter.AccountAdapter : adapter
+  com.example.csufttally.MainActivity .up.|> android.view.View.OnClickListener
+  com.example.csufttally.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.MainActivity o-- com.example.csufttally.adapter.AccountAdapter : adapter
+  com.example.csufttally.MonthChartActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.adapter.ChartVpAdapter : chartVpAdapter
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.frag_chart.IncomeChartFragment : incomeChartFragment
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.frag_chart.OutcomeChartFragment : outcomeChartFragment
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.frag_record.OutcomeFragment : outcomeFragment
+  com.example.csufttally.RecordActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.SearchActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.SearchActivity o-- com.example.csufttally.adapter.AccountAdapter : adapter
+  com.example.csufttally.SettingActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.TreehollowActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.UniteApp -up-|> android.app.Application
+  com.example.csufttally.adapter.AccountAdapter -up-|> android.widget.BaseAdapter
+  com.example.csufttally.adapter.CalendarAdapter -up-|> android.widget.BaseAdapter
+  com.example.csufttally.adapter.ChartItemAdapter -up-|> android.widget.BaseAdapter
+  com.example.csufttally.adapter.ChartVpAdapter -up-|> androidx.fragment.app.FragmentPagerAdapter
+  com.example.csufttally.adapter.RecordPagerAdapter -up-|> androidx.fragment.app.FragmentPagerAdapter
+  com.example.csufttally.db.DBOpenHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.example.csufttally.frag_chart.BaseChartFragment -up-|> androidx.fragment.app.Fragment
+  com.example.csufttally.frag_chart.BaseChartFragment o-- com.example.csufttally.adapter.ChartItemAdapter : itemAdapter
+  com.example.csufttally.frag_chart.IncomeChartFragment -up-|> com.example.csufttally.frag_chart.BaseChartFragment
+  com.example.csufttally.frag_chart.OutcomeChartFragment -up-|> com.example.csufttally.frag_chart.BaseChartFragment
+  com.example.csufttally.frag_record.BaseRecordFragment .up.|> android.view.View.OnClickListener
+  com.example.csufttally.frag_record.BaseRecordFragment -up-|> androidx.fragment.app.Fragment
+  com.example.csufttally.frag_record.BaseRecordFragment o-- com.example.csufttally.db.AccountBean : accountBean
+  com.example.csufttally.frag_record.BaseRecordFragment o-- com.example.csufttally.frag_record.TypeBaseAdapter : adapter
+  com.example.csufttally.frag_record.IncomeFragment -up-|> com.example.csufttally.frag_record.BaseRecordFragment
+  com.example.csufttally.frag_record.OutcomeFragment -up-|> com.example.csufttally.frag_record.BaseRecordFragment
+  com.example.csufttally.frag_record.TypeBaseAdapter -up-|> android.widget.BaseAdapter
+  com.example.csufttally.logs.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.logs.RegisterActivity .up.|> android.view.View.OnClickListener
+  com.example.csufttally.logs.RegisterActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.utils.BeiZhuDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.BeiZhuDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.BeiZhuDialog o-- com.example.csufttally.utils.BeiZhuDialog.OnEsureListener : onEsureListener
+  com.example.csufttally.utils.BudgetDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.BudgetDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.BudgetDialog o-- com.example.csufttally.utils.BudgetDialog.OnEnsureListener : onEnsureListener
+  com.example.csufttally.utils.CalendarDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.CalendarDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.CalendarDialog o-- com.example.csufttally.utils.CalendarDialog.OnRefreshListener : onRefreshListener
+  com.example.csufttally.utils.CalendarDialog o-- com.example.csufttally.adapter.CalendarAdapter : adapter
+  com.example.csufttally.utils.KeyBoardUtils o-- com.example.csufttally.utils.KeyBoardUtils.OnEnsureListener : onEnsureListener
+  com.example.csufttally.utils.MoreDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.MoreDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.SelectTimeDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.SelectTimeDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.SelectTimeDialog o-- com.example.csufttally.utils.SelectTimeDialog.OnEnsureListener : onEnsureListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

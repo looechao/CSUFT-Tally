@@ -1,0 +1,176 @@
+@startuml
+
+title __CSUFTTALLY's Class Diagram__\n
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.AboutActivity {
+        + onClick()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.AccountActivity {
+        + onClick()
+        # onCreate()
+        - showInfoDialog()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.HistoryActivity {
+        ~ dialogSelMonth : int
+        ~ dialogSelPos : int
+        ~ historyLv : ListView
+        ~ mDatas : List<AccountBean>
+        ~ month : int
+        ~ timeTv : TextView
+        ~ year : int
+        + onClick()
+        # onCreate()
+        - deleteItem()
+        - initTime()
+        - loadData()
+        - setLVClickListener()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.MainActivity {
+        ~ day : int
+        ~ editBtn : ImageButton
+        ~ headerView : View
+        ~ mDatas : List<AccountBean>
+        ~ month : int
+        ~ moreBtn : ImageButton
+        ~ preferences : SharedPreferences
+        ~ serchIv : ImageView
+        ~ todayLv : ListView
+        ~ topConTv : TextView
+        ~ topInTv : TextView
+        ~ topOutTv : TextView
+        ~ topbudgetTv : TextView
+        ~ userName : TextView
+        ~ year : int
+        + onClick()
+        # onCreate()
+        # onResume()
+        - addLVHeaderView()
+        - initTime()
+        - initView()
+        - loadDBData()
+        - setLVLongClickListener()
+        - setTopTvShow()
+        - showBudgetDialog()
+        - showDeleteItemDialog()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.MonthChartActivity {
+        ~ chartFragList : List<Fragment>
+        ~ chartVp : ViewPager
+        ~ dateTv : TextView
+        ~ inBtn : Button
+        ~ inTv : TextView
+        ~ outBtn : Button
+        ~ outTv : TextView
+        ~ selectMonth : int
+        ~ selectPos : int
+        - month : int
+        - year : int
+        + onClick()
+        # onCreate()
+        - initFrag()
+        - initStatistics()
+        - initTime()
+        - initView()
+        - setButtonStyle()
+        - setVpSelectListener()
+        - showCalendarDialog()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.RecordActivity {
+        ~ tabLayout : TabLayout
+        ~ viewPager : ViewPager
+        + onClick()
+        # onCreate()
+        - initpager()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.SearchActivity {
+        ~ emptyTv : TextView
+        ~ mDatas : List<AccountBean>
+        ~ searchEt : EditText
+        ~ searchlv : ListView
+        + onClick()
+        # onCreate()
+        - initView()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.SettingActivity {
+        + onClick()
+        # onCreate()
+        - showDeleteDialog()
+        - showThemeDialog()
+        - showUpdateDialog()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.TreehollowActivity {
+        + onClick()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    class com.example.csufttally.UniteApp {
+        + onCreate()
+    }
+  }
+  
+
+  com.example.csufttally.AboutActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.AccountActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.HistoryActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.HistoryActivity o-- com.example.csufttally.adapter.AccountAdapter : adapter
+  com.example.csufttally.MainActivity .up.|> android.view.View.OnClickListener
+  com.example.csufttally.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.MainActivity o-- com.example.csufttally.adapter.AccountAdapter : adapter
+  com.example.csufttally.MonthChartActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.adapter.ChartVpAdapter : chartVpAdapter
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.frag_chart.IncomeChartFragment : incomeChartFragment
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.frag_chart.OutcomeChartFragment : outcomeChartFragment
+  com.example.csufttally.MonthChartActivity o-- com.example.csufttally.frag_record.OutcomeFragment : outcomeFragment
+  com.example.csufttally.RecordActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.SearchActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.SearchActivity o-- com.example.csufttally.adapter.AccountAdapter : adapter
+  com.example.csufttally.SettingActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.TreehollowActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.csufttally.UniteApp -up-|> android.app.Application
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

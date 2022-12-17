@@ -1,0 +1,202 @@
+@startuml
+
+title __UTILS's Class Diagram__\n
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.BeiZhuDialog {
+          ~ cancelBtn : Button
+          ~ ensureBtn : Button
+          ~ et : EditText
+          ~ handler : Handler
+          + BeiZhuDialog()
+          + getEditText()
+          + onClick()
+          + setDialogSize()
+          + setOnEsureListener()
+          # onCreate()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      interface com.example.csufttally.utils.BeiZhuDialog.OnEsureListener {
+          {abstract} + onEnsure()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.BudgetDialog {
+          ~ cancelIv : ImageView
+          ~ ensureBtn : Button
+          ~ handler : Handler
+          ~ moneyEt : EditText
+          + BudgetDialog()
+          + onClick()
+          + setDialogSize()
+          + setOnEnsureListener()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      interface com.example.csufttally.utils.BudgetDialog.OnEnsureListener {
+          {abstract} + onEnsure()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.CalendarDialog {
+          ~ errorIv : ImageView
+          ~ gv : GridView
+          ~ hsvLayout : LinearLayout
+          ~ hsvViewList : List<TextView>
+          ~ selectMonth : int
+          ~ selectPos : int
+          ~ yearList : List<Integer>
+          + CalendarDialog()
+          + onClick()
+          + setDialogSize()
+          + setOnRefreshListener()
+          # onCreate()
+          - addViewToLayout()
+          - changeTvbg()
+          - initGridView()
+          - setGVListener()
+          - setHSVClickListener()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      interface com.example.csufttally.utils.CalendarDialog.OnRefreshListener {
+          {abstract} + onRefresh()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.FloatUtils {
+          {static} + div()
+          {static} + ratio1()
+          {static} + ratioToPercent()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.KeyBoardUtils {
+          ~ listener : OnKeyboardActionListener
+          - editText : EditText
+          - k1 : Keyboard
+          - keyboardView : KeyboardView
+          + KeyBoardUtils()
+          + setOnEnsureListener()
+          + showKeyboard()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      interface com.example.csufttally.utils.KeyBoardUtils.OnEnsureListener {
+          {abstract} + onEnsure()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.MoreDialog {
+          ~ aboutBtn : Button
+          ~ accountBtn : Button
+          ~ clearBtn : Button
+          ~ errorIv : ImageView
+          ~ historyBtn : Button
+          ~ infoBtn : Button
+          ~ treehollowBtn : Button
+          + MoreDialog()
+          + onClick()
+          + setDialogSize()
+          # onCreate()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      class com.example.csufttally.utils.SelectTimeDialog {
+          ~ cancelBtn : Button
+          ~ datePicker : DatePicker
+          ~ ensureBtn : Button
+          ~ hourEt : EditText
+          ~ minuteEt : EditText
+          + SelectTimeDialog()
+          + onClick()
+          + setOnEnsureListener()
+          # onCreate()
+          - hideDatePickerHeader()
+      }
+    }
+  }
+  
+
+  namespace com.example.csufttally {
+    namespace utils {
+      interface com.example.csufttally.utils.SelectTimeDialog.OnEnsureListener {
+          {abstract} + onEnsure()
+      }
+    }
+  }
+  
+
+  com.example.csufttally.utils.BeiZhuDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.BeiZhuDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.BeiZhuDialog o-- com.example.csufttally.utils.BeiZhuDialog.OnEsureListener : onEsureListener
+  com.example.csufttally.utils.BeiZhuDialog +-down- com.example.csufttally.utils.BeiZhuDialog.OnEsureListener
+  com.example.csufttally.utils.BudgetDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.BudgetDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.BudgetDialog o-- com.example.csufttally.utils.BudgetDialog.OnEnsureListener : onEnsureListener
+  com.example.csufttally.utils.BudgetDialog +-down- com.example.csufttally.utils.BudgetDialog.OnEnsureListener
+  com.example.csufttally.utils.CalendarDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.CalendarDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.CalendarDialog o-- com.example.csufttally.utils.CalendarDialog.OnRefreshListener : onRefreshListener
+  com.example.csufttally.utils.CalendarDialog o-- com.example.csufttally.adapter.CalendarAdapter : adapter
+  com.example.csufttally.utils.CalendarDialog +-down- com.example.csufttally.utils.CalendarDialog.OnRefreshListener
+  com.example.csufttally.utils.KeyBoardUtils o-- com.example.csufttally.utils.KeyBoardUtils.OnEnsureListener : onEnsureListener
+  com.example.csufttally.utils.KeyBoardUtils +-down- com.example.csufttally.utils.KeyBoardUtils.OnEnsureListener
+  com.example.csufttally.utils.MoreDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.MoreDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.SelectTimeDialog .up.|> android.view.View.OnClickListener
+  com.example.csufttally.utils.SelectTimeDialog -up-|> android.app.Dialog
+  com.example.csufttally.utils.SelectTimeDialog o-- com.example.csufttally.utils.SelectTimeDialog.OnEnsureListener : onEnsureListener
+  com.example.csufttally.utils.SelectTimeDialog +-down- com.example.csufttally.utils.SelectTimeDialog.OnEnsureListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
