@@ -2,8 +2,8 @@
 
 #### 简介
 
-<div style="width: 80%; margin: auto;">
-    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally4.jpg" style="width: 100%;" />
+<div style="width: 80%; margin: auto">
+    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally4.png" style="width: 20%;" />
 </div>
 
 
@@ -12,13 +12,13 @@
 #### 效果
 
 <div style="width: 80%; margin: auto;">
-    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally1.png" style="width: 100%;" />
+    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally1.jpg" style="width: 40%;" />
 </div>
 
 <div style="width: 80%; margin: auto;">
-    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally2.png" style="width: 100%;" />
+    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally2.jpg" style="width: 40%;" />
 </div>
 
 <div style="width: 80%; margin: auto;">
-    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally3.png" style="width: 100%;" />
+    <img src="https://raw.githubusercontent.com/looechao/blogimg/main/tally3.jpg" style="width: 40%;" />
 </div>
