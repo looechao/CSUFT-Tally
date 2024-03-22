@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/dialog_more_iv"
+        android:src="@drawable/ic_final_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="30dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/dialog_more_btn_account"
+            android:text="@string/accountInfo"
+            style="@style/dialogmoreStyle"
+            android:drawableLeft="@drawable/ic_final_account"/>
+        <Button
+            android:id="@+id/dialog_more_btn_record"
+            android:text="@string/history_record"
+            style="@style/dialogmoreStyle"
+            android:drawableLeft="@drawable/ic_final_detail"/>
+        <Button
+            android:id="@+id/dialog_more_btn_info"
+            android:text="@string/chart"
+            style="@style/dialogmoreStyle"
+            android:drawableLeft="@drawable/ic_final_chart"/>
+        <Button
+            android:id="@+id/dialog_more_btn_clear"
+            android:text="@string/setting"
+            style="@style/dialogmoreStyle"
+            android:drawableLeft="@drawable/ic_final_setting"/>
+        <Button
+            android:id="@+id/dialog_more_btn_treehollow"
+            android:text="@string/treehollow"
+            style="@style/dialogmoreStyle"
+            android:drawableLeft="@drawable/ic_treehollow"/>
+        <Button
+            android:id="@+id/dialog_more_btn_about"
+            android:text="@string/about"
+            style="@style/dialogmoreStyle"
+            android:drawableLeft="@drawable/ic_final_info"/>
+    </LinearLayout>
+
+</LinearLayout>

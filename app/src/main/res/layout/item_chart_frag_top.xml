@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/item_chartfrag_piechart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/item_chartfrag_barchart"
+        android:layout_below="@id/item_chartfrag_piechart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <TextView
+        android:id="@+id/item_chart_top_tv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:text="@string/NoData"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

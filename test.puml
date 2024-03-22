@@ -1,0 +1,490 @@
+@startuml
+class com.example.csufttally.utils.BeiZhuDialog {
+~ EditText et
+~ Button cancelBtn
+~ OnEsureListener onEsureListener
+~ Handler handler
++ void setOnEsureListener(OnEsureListener)
+# void onCreate(Bundle)
++ void onClick(View)
++ String getEditText()
++ void setDialogSize()
+}
+interface com.example.csufttally.utils.BeiZhuDialog.OnEsureListener {
++ void onEnsure()
+}
+class com.example.csufttally.db.DBManager {
+- {static} SQLiteDatabase db
++ {static} void initDB(Context)
++ {static} List<TypeBean> getTypeList(int)
++ {static} void insertItemToAccounttb(AccountBean)
++ {static} List<AccountBean> getAccountListOneDayFromAccounttb(int,int,int)
++ {static} int getSumMoneyOneDay(int,int,int,int)
++ {static} int getSumMoneyOneMonth(int,int,int)
++ {static} int getCountItemOneMonth(int,int,int)
++ {static} int getSumMoneyOneYear(int,int)
++ {static} int deleteItemFromAccounttbById(int)
++ {static} List<AccountBean> getAccountListByRemarkFromAccounttb(String)
++ {static} List<AccountBean> getAccountListOneMonthFromAccounttb(int,int)
++ {static} List<Integer> getYearListFromAccounttb()
++ {static} void deleteAllAccount()
++ {static} List<ChartItemBean> getChartListFromAccounttb(int,int,int)
++ {static} int getMaxMoneyOneDay(int,int,int)
++ {static} List<BarChartItemBean> getSumMoneyOneDayInMonth(int,int,int)
+}
+class com.example.csufttally.adapter.CalendarAdapter {
+~ Context context
+~ List<String> mDatas
++ int year
++ int selPos
++ void setYear(int)
+- void loadDatas(int)
++ int getCount()
++ Object getItem(int)
++ long getItemId(int)
++ View getView(int,View,ViewGroup)
+}
+class com.example.csufttally.AccountActivity {
+# void onCreate(Bundle)
++ void onClick(View)
+- void showInfoDialog()
+}
+class com.example.csufttally.frag_chart.IncomeChartFragment {
+~ int kind
++ void onResume()
+# void setPieData(int,int)
+# void setAxisData(int,int)
+# void setYAxis(int,int)
++ void setDate(int,int)
+}
+class com.example.csufttally.RecordActivity {
+~ TabLayout tabLayout
+~ ViewPager viewPager
+# void onCreate(Bundle)
+- void initpager()
++ void onClick(View)
+}
+class com.example.csufttally.adapter.RecordPagerAdapter {
+~ List<Fragment> fragmentList
+~ String[] titles
++ Fragment getItem(int)
++ int getCount()
++ CharSequence getPageTitle(int)
+}
+class com.example.csufttally.logs.RegisterActivity {
++ {static} int RESULT_CODE_REGISTER
+- Button btnRegister
+- EditText etAccount
+- CheckBox cbAgree
+# void onCreate(Bundle)
++ void onClick(View)
+}
+class com.example.csufttally.logs.LoginActivity {
+- {static} String TAG
++ {static} int REQUEST_CODE_REGISTER
+- Button btnLogin
+- EditText etAccount
+- CheckBox cbRemember
+- String userName
+- String pass
+# void onCreate(Bundle)
+- void initView()
+- void initData()
++ void toRegister(View)
+# void onActivityResult(int,int,Intent)
+}
+class com.example.csufttally.UniteApp {
++ void onCreate()
+}
+class com.example.csufttally.utils.KeyBoardUtils {
+- Keyboard k1
+- KeyboardView keyboardView
+- EditText editText
+~ OnEnsureListener onEnsureListener
+~ KeyboardView.OnKeyboardActionListener listener
++ void setOnEnsureListener(OnEnsureListener)
++ void showKeyboard()
+}
+interface com.example.csufttally.utils.KeyBoardUtils.OnEnsureListener {
++ void onEnsure()
+}
+class com.example.csufttally.db.BarChartItemBean {
+~ int year
+~ int month
+~ int day
+~ float summoney
++ int getYear()
++ void setYear(int)
++ int getMonth()
++ void setMonth(int)
++ int getDay()
++ void setDay(int)
++ float getSummoney()
++ void setSummoney(float)
+}
+class com.example.csufttally.db.PieChartItemBean {
+~ int year
+~ int month
+~ int day
+~ String Type
+~ float ratio
+~ float totalMoney
++ int getDay()
++ void setDay(int)
+}
+class com.example.csufttally.adapter.ChartVpAdapter {
+~ List<Fragment> fragmentList
++ Fragment getItem(int)
++ int getCount()
+}
+class com.example.csufttally.utils.MoreDialog {
+~ Button accountBtn
+~ ImageView errorIv
+# void onCreate(Bundle)
++ void onClick(View)
++ void setDialogSize()
+}
+class com.example.csufttally.TreehollowActivity {
+# void onCreate(Bundle)
++ void onClick(View)
+}
+abstract class com.example.csufttally.frag_chart.BaseChartFragment {
+~ ListView chartLv
+~ PieChart pieChart
+~ BarChart barChart
+~ TextView chartTv
++ int year
+~ List<ChartItemBean> mDatas
+- ChartItemAdapter itemAdapter
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+# void addLvHeaderView()
+# {abstract}void setPieData(int,int)
+# {abstract}void setAxisData(int,int)
+# void setAxis(int,int)
+# {abstract}void setYAxis(int,int)
++ void setDate(int,int)
++ void loadData(int,int,int)
+}
+class com.example.csufttally.HistoryActivity {
+~ ListView historyLv
+~ TextView timeTv
+~ List<AccountBean> mDatas
+~ AccountAdapter adapter
+~ int year
+~ int dialogSelPos
+~ int dialogSelMonth
+# void onCreate(Bundle)
+- void setLVClickListener()
+- void deleteItem(AccountBean)
+- void loadData(int,int)
+- void initTime()
++ void onClick(View)
+}
+class com.example.csufttally.MonthChartActivity {
+~ Button inBtn
+~ TextView dateTv
+~ ViewPager chartVp
+- int year
+~ int selectPos
+~ List<Fragment> chartFragList
+- IncomeChartFragment incomeChartFragment
+- OutcomeFragment outcomeFragment
+- ChartVpAdapter chartVpAdapter
+- OutcomeChartFragment outcomeChartFragment
+# void onCreate(Bundle)
+- void setVpSelectListener()
+- void initFrag()
+- void initStatistics(int,int)
+- void initTime()
+- void initView()
++ void onClick(View)
+- void showCalendarDialog()
+- void setButtonStyle(int)
+}
+class com.example.csufttally.utils.SelectTimeDialog {
+~ EditText hourEt
+~ DatePicker datePicker
+~ Button ensureBtn
+~ OnEnsureListener onEnsureListener
++ void setOnEnsureListener(OnEnsureListener)
+# void onCreate(Bundle)
++ void onClick(View)
+- void hideDatePickerHeader()
+}
+interface com.example.csufttally.utils.SelectTimeDialog.OnEnsureListener {
++ void onEnsure(String,int,int,int)
+}
+class com.example.csufttally.SettingActivity {
+# void onCreate(Bundle)
++ void onClick(View)
+- void showThemeDialog()
+- void showUpdateDialog()
+- void showDeleteDialog()
+}
+class com.example.csufttally.adapter.AccountAdapter {
+~ Context context
+~ List<AccountBean> mDatas
+~ LayoutInflater inflater
+~ int year
++ int getCount()
++ Object getItem(int)
++ long getItemId(int)
++ View getView(int,View,ViewGroup)
+}
+class com.example.csufttally.adapter.AccountAdapter.ViewHolder {
+~ ImageView typeIv
+~ TextView typeTv
+}
+class com.example.csufttally.frag_record.IncomeFragment {
++ void loadDataToGv()
++ void saveAccountToDB()
+}
+class com.example.csufttally.frag_record.TypeBaseAdapter {
+~ Context context
+~ List<TypeBean> mDatas
+~ int selectPos
++ int getCount()
++ Object getItem(int)
++ long getItemId(int)
++ View getView(int,View,ViewGroup)
+}
+class com.example.csufttally.SearchActivity {
+~ ListView searchlv
+~ EditText searchEt
+~ TextView emptyTv
+~ List<AccountBean> mDatas
+~ AccountAdapter adapter
+# void onCreate(Bundle)
+- void initView()
++ void onClick(View)
+}
+class com.example.csufttally.AboutActivity {
+# void onCreate(Bundle)
++ void onClick(View)
+}
+class com.example.csufttally.utils.BudgetDialog {
+~ ImageView cancelIv
+~ Button ensureBtn
+~ EditText moneyEt
+~ OnEnsureListener onEnsureListener
+~ Handler handler
++ void setOnEnsureListener(OnEnsureListener)
++ void onClick(View)
++ void setDialogSize()
+}
+interface com.example.csufttally.utils.BudgetDialog.OnEnsureListener {
++ void onEnsure(int)
+}
+class com.example.csufttally.utils.FloatUtils {
++ {static} float div(float,float)
++ {static} String ratioToPercent(float)
++ {static} float ratio1(float)
+}
+class com.example.csufttally.db.AccountBean {
+~ int id
+~ String typename
+~ int sImageId
+~ String beizhu
+~ int money
+~ String time
+~ int year
+~ int month
+~ int day
+~ int kind
++ int getId()
++ void setId(int)
++ String getTypename()
++ void setTypename(String)
++ int getsImageId()
++ void setsImageId(int)
++ String getBeizhu()
++ void setBeizhu(String)
++ int getMoney()
++ void setMoney(int)
++ String getTime()
++ void setTime(String)
++ int getYear()
++ void setYear(int)
++ int getMonth()
++ void setMonth(int)
++ int getDay()
++ void setDay(int)
++ int getKind()
++ void setKind(int)
+}
+class com.example.csufttally.frag_record.OutcomeFragment {
++ void loadDataToGv()
++ void saveAccountToDB()
+}
+abstract class com.example.csufttally.frag_record.BaseRecordFragment {
+~ KeyboardView keyboardView
+~ EditText moneyEt
+~ ImageView typeIv
+~ TextView typeTv
+~ GridView typeGv
+~ List<TypeBean> typeList
+~ TypeBaseAdapter adapter
+~ AccountBean accountBean
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void setInitTime()
+- void setGVListener()
++ void loadDataToGv()
+- void initView(View)
++ {abstract}void saveAccountToDB()
++ void onClick(View)
+- void showTimeDialog()
++ void showBZDialog()
+}
+class com.example.csufttally.adapter.ChartItemAdapter {
+~ Context context
+~ List<ChartItemBean> mDatas
+~ LayoutInflater inflater
++ int getCount()
++ Object getItem(int)
++ long getItemId(int)
++ View getView(int,View,ViewGroup)
+}
+class com.example.csufttally.adapter.ChartItemAdapter.ViewHolder {
+~ TextView typeTv
+~ ImageView iv
+}
+class com.example.csufttally.MainActivity {
+~ ListView todayLv
+~ ImageView serchIv
+~ ImageButton editBtn
+~ ImageButton moreBtn
+~ View headerView
+~ TextView topOutTv
+~ SharedPreferences preferences
+~ List<AccountBean> mDatas
+~ AccountAdapter adapter
+~ int year
+# void onCreate(Bundle)
+- void initView()
+- void addLVHeaderView()
+- void setLVLongClickListener()
+- void showDeleteItemDialog(AccountBean)
+- void initTime()
+# void onResume()
+- void setTopTvShow()
+- void loadDBData()
++ void onClick(View)
+- void showBudgetDialog()
+}
+class com.example.csufttally.db.DBOpenHelper {
++ void onCreate(SQLiteDatabase)
+- void insertType(SQLiteDatabase)
+- void insertAccount(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
+}
+class com.example.csufttally.db.ChartItemBean {
+~ int sImageId
+~ String Type
+~ float ratio
+~ float totalMoney
++ void setsImageId(int)
++ void setType(String)
++ void setRatio(float)
++ void setTotalMoney(float)
++ int getsImageId()
++ String getType()
++ float getRatio()
++ float getTotalMoney()
+}
+class com.example.csufttally.frag_chart.OutcomeChartFragment {
+~ int kind
++ void onResume()
+# void setPieData(int,int)
+# void setAxisData(int,int)
+# void setYAxis(int,int)
++ void setDate(int,int)
+}
+class com.example.csufttally.db.TypeBean {
+~ int id
+~ String typename
+~ int imageId
+~ int sImageId
+~ int kind
++ int getId()
++ void setId(int)
++ String getTypename()
++ void setTypename(String)
++ int getImageId()
++ void setImageId(int)
++ int getSimageId()
++ void setSimageId(int)
++ int getKind()
++ void setKind(int)
+}
+class com.example.csufttally.utils.CalendarDialog {
+~ ImageView errorIv
+~ GridView gv
+~ LinearLayout hsvLayout
+~ List<TextView> hsvViewList
+~ List<Integer> yearList
+~ int selectPos
+- CalendarAdapter adapter
+~ int selectMonth
+~ OnRefreshListener onRefreshListener
++ void setOnRefreshListener(OnRefreshListener)
+# void onCreate(Bundle)
+- void setGVListener()
+- void initGridView()
+- void addViewToLayout()
+- void setHSVClickListener()
+- void changeTvbg(int)
++ void onClick(View)
++ void setDialogSize()
+}
+interface com.example.csufttally.utils.CalendarDialog.OnRefreshListener {
++ void onRefresh(int,int,int)
+}
+
+
+com.example.csufttally.utils.OnClickListener <|.. com.example.csufttally.utils.BeiZhuDialog
+android.app.Dialog <|-- com.example.csufttally.utils.BeiZhuDialog
+com.example.csufttally.utils.BeiZhuDialog +.. com.example.csufttally.utils.BeiZhuDialog.OnEsureListener
+android.widget.BaseAdapter <|-- com.example.csufttally.adapter.CalendarAdapter
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.AccountActivity
+com.example.csufttally.frag_chart.BaseChartFragment <|-- com.example.csufttally.frag_chart.IncomeChartFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.RecordActivity
+androidx.fragment.app.FragmentPagerAdapter <|-- com.example.csufttally.adapter.RecordPagerAdapter
+com.example.csufttally.logs.OnClickListener <|.. com.example.csufttally.logs.RegisterActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.logs.RegisterActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.logs.LoginActivity
+android.app.Application <|-- com.example.csufttally.UniteApp
+com.example.csufttally.utils.KeyBoardUtils +.. com.example.csufttally.utils.KeyBoardUtils.OnEnsureListener
+androidx.fragment.app.FragmentPagerAdapter <|-- com.example.csufttally.adapter.ChartVpAdapter
+com.example.csufttally.utils.OnClickListener <|.. com.example.csufttally.utils.MoreDialog
+android.app.Dialog <|-- com.example.csufttally.utils.MoreDialog
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.TreehollowActivity
+androidx.fragment.app.Fragment <|-- com.example.csufttally.frag_chart.BaseChartFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.HistoryActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.MonthChartActivity
+com.example.csufttally.utils.OnClickListener <|.. com.example.csufttally.utils.SelectTimeDialog
+android.app.Dialog <|-- com.example.csufttally.utils.SelectTimeDialog
+com.example.csufttally.utils.SelectTimeDialog +.. com.example.csufttally.utils.SelectTimeDialog.OnEnsureListener
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.SettingActivity
+android.widget.BaseAdapter <|-- com.example.csufttally.adapter.AccountAdapter
+com.example.csufttally.adapter.AccountAdapter +.. com.example.csufttally.adapter.AccountAdapter.ViewHolder
+com.example.csufttally.frag_record.BaseRecordFragment <|-- com.example.csufttally.frag_record.IncomeFragment
+android.widget.BaseAdapter <|-- com.example.csufttally.frag_record.TypeBaseAdapter
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.SearchActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.AboutActivity
+com.example.csufttally.utils.OnClickListener <|.. com.example.csufttally.utils.BudgetDialog
+android.app.Dialog <|-- com.example.csufttally.utils.BudgetDialog
+com.example.csufttally.utils.BudgetDialog +.. com.example.csufttally.utils.BudgetDialog.OnEnsureListener
+com.example.csufttally.frag_record.BaseRecordFragment <|-- com.example.csufttally.frag_record.OutcomeFragment
+com.example.csufttally.frag_record.OnClickListener <|.. com.example.csufttally.frag_record.BaseRecordFragment
+androidx.fragment.app.Fragment <|-- com.example.csufttally.frag_record.BaseRecordFragment
+android.widget.BaseAdapter <|-- com.example.csufttally.adapter.ChartItemAdapter
+com.example.csufttally.adapter.ChartItemAdapter +.. com.example.csufttally.adapter.ChartItemAdapter.ViewHolder
+com.example.csufttally.OnClickListener <|.. com.example.csufttally.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.csufttally.MainActivity
+android.database.sqlite.SQLiteOpenHelper <|-- com.example.csufttally.db.DBOpenHelper
+com.example.csufttally.frag_chart.BaseChartFragment <|-- com.example.csufttally.frag_chart.OutcomeChartFragment
+com.example.csufttally.utils.OnClickListener <|.. com.example.csufttally.utils.CalendarDialog
+android.app.Dialog <|-- com.example.csufttally.utils.CalendarDialog
+com.example.csufttally.utils.CalendarDialog +.. com.example.csufttally.utils.CalendarDialog.OnRefreshListener
+@enduml
